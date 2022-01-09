@@ -1,9 +1,15 @@
 <template>
- <div>
-   <UrunAdd> </UrunAdd>
-   <Image> </Image>
-  
-   
+ <div class="container">
+    <h1 class="text-center">Ürün Ekleme Uygulaması</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <Image />
+        </div>
+        <div class="col-md-6">
+            <UrunAdd />
+        </div>
+    </div>
 </div>
 
 </template>
