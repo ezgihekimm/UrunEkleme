@@ -1,15 +1,34 @@
 <template>
- <div class="container">
-    <h1 class="text-center">Ürün Ekleme Uygulaması</h1>
+ <div class="container mt-3">
+    <h1 class="text-center mt-3 mb-3">Ürün Ekleme Uygulaması</h1>
     <hr>
-    <div class="row">
-        <div class="col-md-6">
-            <Image />
-        </div>
-        <div class="col-md-6">
-            <UrunAdd />
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <UrunAdd :list="Ekle"/>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <Bar/>
+        </div>
+    </div>
+    
+    <hr>
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <h1>Eklenen Ürünlerin Listesi</h1>
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-12">
+         <Urunler :list="Ekle"/>
+        </div>
+
+    </div>
+
+  
 </div>
 
 </template>
@@ -17,17 +36,25 @@
 
 
 <script>
+
 import UrunAdd from './components/UrunAdd.vue'
-import Image from './components/Image.vue'
-
-
+import Bar from './components/Bar.vue'
+import Urunler from './components/Urunler.vue'
+ 
 export default{
-
+    name:'App',
     components:{
         UrunAdd,
-        Image
+        Bar,
+        Urunler
+    },
 
-    }
+    data() {
+        return {
+            Ekle:[]
+        }
+   },
+ 
 }
 
 </script>
