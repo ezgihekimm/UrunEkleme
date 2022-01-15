@@ -87,8 +87,8 @@
          },
          methods: {
              Submit() {
-                this.$props.list.push({isim: this.isim},{adet: this.adet},{fiyat: this.fiyat})
-               
+                this.$props.list.push({isim: this.isim,adet: this.adet,fiyat: this.fiyat, resim:this.selectedimage})
+                /*this.$emit("image",this.selectedimage)*/               
              },
              onchange(e){
                 const file = e.target.files[0];
@@ -101,6 +101,7 @@
                  adet:"",
                  fiyat:"",
                  selectedimage:null,
+
              }
          }
 

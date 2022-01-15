@@ -4,7 +4,7 @@
     <hr>
     <div class="row mt-5">
         <div class="col-md-12">
-            <UrunAdd :list="Ekle"/>
+            <UrunAdd :list="Ekle" />
         </div>
     </div>
     <div class="row">
@@ -51,7 +51,8 @@ export default{
 
     data() {
         return {
-            Ekle:[]
+            Ekle:[],
+            resim:""
         }
    },
  
