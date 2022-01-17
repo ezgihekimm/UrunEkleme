@@ -4,28 +4,24 @@
     <hr>
     <div class="row mt-5">
         <div class="col-md-12">
-            <UrunAdd :list="Ekle" />
+            <UrunAdd  :takip="listtakip"  :list="Ekle" />
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <Bar/>
+            <Bar :list="Ekle"/>
         </div>
     </div>
     
     <hr>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-center">
+        <div class="col-md- d-fle12x justify-content-center">
             <h1>Eklenen Ürünlerin Listesi</h1>
 
         </div>
     </div>
     <div class="row">
-
-        <div class="col-md-12">
-         <Urunler :list="Ekle"/>
-        </div>
-
+        <Urunler  :list="Ekle"/>
     </div>
 
   
@@ -52,10 +48,18 @@ export default{
     data() {
         return {
             Ekle:[],
-            resim:""
+            resim:"",
         }
    },
- 
+   methods:{
+       listtakip(){
+           if(this.Ekle.length>=10){
+               alert("Sepetiniz Dolmuştur!!!")
+               return true;
+           }
+           else return false;
+       }
+   }
 }
 
 </script>

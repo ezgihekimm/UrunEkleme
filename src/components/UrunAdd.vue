@@ -76,36 +76,39 @@
  </template>
 
  <script>
-     
+    export default {
+        name:'UrunAdd',
 
-     export default {
-         name:'UrunAdd',
+        props: {
+        list: Array, 
+        takip:Function,
+            
+        },
+        methods: {
+            
+            Submit() {
+                this.takip()
+                if(this.takip() == false){
+                    this.$props.list.push({isim: this.isim,adet: this.adet,fiyat: this.fiyat, resim:this.selectedimage})
+                }
+            },
 
-         props: {
-            list: Array, 
-             
-         },
-         methods: {
-             Submit() {
-                this.$props.list.push({isim: this.isim,adet: this.adet,fiyat: this.fiyat, resim:this.selectedimage})
-                /*this.$emit("image",this.selectedimage)*/               
-             },
-             onchange(e){
+            onchange(e){
                 const file = e.target.files[0];
                 this.selectedimage = URL.createObjectURL(file)
-             }
-         },
-         data(){
-             return{
-                 isim:"",
-                 adet:"",
-                 fiyat:"",
-                 selectedimage:null,
+            }
+        },
+        data(){
+            return{
+                isim:"",
+                adet:"",
+                fiyat:"",
+                selectedimage:null,
 
-             }
-         }
+            }
+        }
 
-     }
+    }
  </script>
 
  <style scoped>
