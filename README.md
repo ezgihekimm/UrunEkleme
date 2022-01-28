@@ -1,5 +1,9 @@
 # urun-ekleme
 
+## Screenshot
+
+![Screenshot](./screenshots/urun-ekleme.png)
+
 ## Project setup
 ```
 npm install
