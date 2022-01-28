@@ -15,7 +15,7 @@
     
     <hr>
     <div class="row">
-        <div class="col-md- d-fle12x justify-content-center">
+        <div class="col-md- d-flex justify-content-center">
             <h1>Eklenen Ürünlerin Listesi</h1>
 
         </div>

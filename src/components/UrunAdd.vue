@@ -61,8 +61,14 @@
 
                          <div class="row ">
                              <div class="col-md-12">
-                                 <button @click="Submit" type="button"
-                                     class="btn btn-outline-success d-grid col-12">Ekle!!</button>
+
+                      
+                                  <div>
+                                 <button @click="Submit" type="button" class="btn btn-outline-success d-grid col-12">Ekle!!</button>
+                                  </div>
+                     
+
+
                              </div>
                          </div>
 
@@ -111,6 +117,6 @@
     }
  </script>
 
- <style scoped>
+ <style >
 
  </style>

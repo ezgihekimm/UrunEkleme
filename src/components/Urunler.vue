@@ -2,6 +2,7 @@
  <div class="container">
     <div class="row">
         <div v-for="item in list" :key="item" class="col-md-3 mb-4">
+<transition name="fade">
             <div class="card">
                 <ul class="list-group list-group-flush " style="text-align:center">
                     <img :src="item.resim" alt="" style="width: 100px; display: block; margin: auto; padding:7px;">
@@ -10,6 +11,7 @@
                     <li class="list-group-item">Ürün Fiyat: {{item.fiyat}}</li>
                 </ul> 
             </div>
+</transition>
         </div>
     </div>
  </div>
